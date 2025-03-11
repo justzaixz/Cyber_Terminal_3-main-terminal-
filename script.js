@@ -185,30 +185,31 @@ const trafficChart = new Chart(ctx, {
     options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false, // Added this line
         scales: {
             x: {
                 grid: {
-                    color: "rgba(0, 255, 204, 0.2)", // Grid color (faint neon blue-green)
+                    color: "rgba(0, 255, 204, 0.2)",
                     lineWidth: 1,
-                    borderDash: [5, 5] // Dashed grid lines
+                    borderDash: [5, 5]
                 },
-                ticks: { display: false } // Hide x-axis labels
+                ticks: { display: false }
             },
             y: {
                 grid: {
-                    color: "rgba(0, 255, 204, 0.2)", // Same as x-axis grid
+                    color: "rgba(0, 255, 204, 0.2)",
                     lineWidth: 1,
-                    borderDash: [5, 5] // Dashed grid lines
+                    borderDash: [5, 5]
                 },
-                ticks: { display: false } // Hide y-axis labels
+                ticks: { display: false }
             }
         },
         elements: {
-            line: { tension: 0.3 }, // Smooth curve
-            point: { radius: 0 } // No dots on points
+            line: { tension: 0.3 },
+            point: { radius: 0 }
         },
         plugins: {
-            legend: { display: false } // Hide legend
+            legend: { display: false }
         }
     }
 });
