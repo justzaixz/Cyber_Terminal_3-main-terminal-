@@ -1,7 +1,6 @@
 body {
     background-color: #000000;
     cursor: none; /* Hide mouse cursor for the entire page */
-    font-family: 'Courier New', Courier, monospace;
 }
 
 #keyboard {
@@ -45,13 +44,13 @@ body {
 }
 
 .key.lit {
-    border: 1px groove #0f0;
-    color: #0f0;
+    border: 1px groove #297038;
+    color: #297038;
 }
 
 .key.lit.space {
     border: #297038;
-    background-color: #0f0;
+    background-color: #297038;
     color: #000000;
 }
 
@@ -96,4 +95,86 @@ body {
     left:1%;
     color: #297038;
     position: absolute;
+}
+
+
+#globe-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    height: 300px;
+    z-index: 1000; /* Ensures it stays on top */
+}
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#network-traffic-container {
+    position: absolute;
+    top: 250px; /* Adjust this for positioning */
+    right: 10px;
+    width: 300px; /* Adjust size */
+    height: 150px;
+    background: rgba(0, 0, 0, 0.8); 
+    border: none; /* no border */
+    padding: 10px;
+    box-shadow: none;
+    color: #297038;
+}
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
+h2 {
+    top: 0px;
+    position: absolute;
+    color: #297038;
+    font-size: 15px;
+}
+
+h1 {
+    top: 30px;
+    position: absolute;
+    color: #297038;
+    font-size: 15px;
+    right: 100px;
+}
+
+
+#system-panel {
+    background-color: #101820;
+    color: #297038;
+    font-family: "Courier New", monospace;
+    padding: 10px;
+    border: 2px solid #297038;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+}
+
+.system-header, .cpu-usage, .memory-usage, .top-processes {
+    border-bottom: 1px solid #297038;
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
 }
