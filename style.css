@@ -1,0 +1,180 @@
+body {
+    background-color: #000000;
+    cursor: none; /* Hide mouse cursor for the entire page */
+}
+
+#keyboard {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.key {
+    min-width: 50px;
+    height: 50px;
+    background-color: #000;
+    color: #297038;
+    border: 1px transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.wide {
+    min-width: 60px;
+}
+
+.space {
+    min-width: 400px;
+    border: solid 1px #297038;
+}
+
+.key.lit {
+    border: 1px groove #0f0;
+    color: #0f0;
+}
+
+.key.lit.space {
+    border: #297038;
+    background-color: #0f0;
+    color: #000000;
+}
+
+#terminal {
+    background-color: #000;
+    color: #0f0;
+    font-family: monospace;
+    padding: 10px;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #297038;
+    height: 400px;
+    overflow-y: auto;
+}
+
+#terminal-output {
+    margin-bottom: 5px;
+}
+
+#terminal-input {
+    display: flex;
+}
+
+.prompt {
+    margin-right: 5px;
+}
+
+#command-input {
+    background-color: transparent;
+    color: #0f0;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-family: monospace;
+    caret-color: transparent; /* Hide the caret cursor */
+}
+
+
+.time-container{
+    top:-1%;
+    left:1%;
+    color: #0f0;
+    position: absolute;
+}
+
+
+#globe-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    height: 300px;
+    z-index: 1000; /* Ensures it stays on top */
+}
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#network-traffic-container {
+    position: absolute;
+    top: 250px; /* Adjust this for positioning */
+    right: 10px;
+    width: 300px; /* Adjust size */
+    height: 150px;
+    background: rgba(0, 0, 0, 0.8); 
+    border: none; /* no border */
+    padding: 10px;
+    box-shadow: none;
+    color: #0f0;
+}
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
+h2 {
+    top: 0px;
+    position: absolute;
+    color: #0f0;
+    font-size: 15px;
+}
+
+h1 {
+    top: 30px;
+    position: absolute;
+    color: #0f0;
+    font-size: 15px;
+    right: 100px;
+}
+
+
+#system-panel {
+    background-color: #101820;
+    color: #0f0;
+    font-family: "Courier New", monospace;
+    padding: 10px;
+    border: 2px solid #0f0;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+}
+
+.system-header, .cpu-usage, .memory-usage, .top-processes {
+    border-bottom: 1px solid #0f0;
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
