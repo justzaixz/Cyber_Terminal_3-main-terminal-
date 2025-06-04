@@ -49,8 +49,22 @@ const commands = {
 
     1349: () => {
         terminalOutput.innerHTML = '<p style="color:yellow">Error 1349<br><br><br> Recieved due to attempt in starting a game without a lesson.<br><br> After each video or article, you will be able to play a game corresponding to that topic.. <br><br>Type "clear" to go back';
-    }
-};
+    },
+
+    videos: () => {
+        terminalOutput.innerHTML = 
+        
+        //VIDEO SELECTION:
+
+        '<p style="color:cyan">Available Videos:<br><br><br> 1) "Former NSA Hacker Reveals 5 Ways To Protect Yourself Online", Type "NSA" to Watch <b>(IN CAPS)</b> '
+    },
+
+    //COMMANDS FROM HERE ARE VIDEOS:
+    NSA: () => {
+        terminalOutput.innerHTML = '<p style="color:lightgreen">Redirecting to "Former NSA Hacker Reveals 5 Ways To Protect Yourself Online"..';
+        setTimeout(() => { window.location.href = 'https://www.youtube.com/watch?v=-ni_PWxrsNo'; }, 3000);
+      },
+    };
 
 
 // Keydown event to highlight keys on the virtual keyboard
@@ -153,7 +167,7 @@ const geometry = new THREE.SphereGeometry(2, 64, 64);
 const material = new THREE.MeshBasicMaterial({ map: globeTexture });
 const globe = new THREE.Mesh(geometry, material);
 scene.add(globe);
-
+    
 // Animation loop
 function animate() {
     requestAnimationFrame(animate);
